@@ -75,7 +75,7 @@ def create_fib():
     db.session.add(obj)
     db.session.commit()
     current_app.ilog(request.remote_addr,
-        'Created fib id:{}'.format(obj.id), 204)
+        'Created fib id:{}'.format(obj.id), 201)
     return jsonify({
         'id': obj.id,
         'sequence': obj.sequence,
